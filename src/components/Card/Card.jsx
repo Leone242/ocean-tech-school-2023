@@ -1,13 +1,15 @@
 import "./Card.css"
 
-export default function Card(){
+export default function Card(props){
+    console.log(props);
+    const item = props.item;
     return  <div className="card">
-    <h2>Sea of Thieves</h2>
+    <h2>{item.nome}</h2>
     <div className="tags">
       <spam className="tag">Aventura</spam>
       <spam className="tag">Multiplayer</spam>
       <spam className="tag">Mundo Aberto</spam>
     </div>
-    <img src="https://nosnerds.com.br/wp-content/uploads/2018/01/seaofthieves-capa.jpg"></img>
+    <img src={item.imagemUrl}></img>
   </div>
 }
